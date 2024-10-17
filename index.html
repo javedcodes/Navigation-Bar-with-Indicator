@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for Responsive Design and Compatibility -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Navigation Bar with Indicator</title>
+
+    <!-- External CSS for Styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons Icon Library (for icons used in the navigation) -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Main Navigation Bar -->
+    <nav class="nav">
+        <!-- Navigation List -->
+        <ul class="nav-content">
+            <!-- Home Navigation Item -->
+            <li class="nav-list">
+                <a href="#" class="link-item active">
+                    <i class='bx bxs-home link-icon'></i> <!-- Icon -->
+                    <span class="link-text">Home</span> <!-- Text for Home -->
+                </a>
+            </li>
+
+            <!-- Content Navigation Item -->
+            <li class="nav-list">
+                <a href="#" class="link-item">
+                    <i class='bx bxs-caret-right-square link-icon'></i> <!-- Icon -->
+                    <span class="link-text">Content</span> <!-- Text for Content -->
+                </a>
+            </li>
+
+            <!-- Analytics Navigation Item -->
+            <li class="nav-list">
+                <a href="#" class="link-item">
+                    <i class='bx bxs-bar-chart-square link-icon'></i> <!-- Icon -->
+                    <span class="link-text">Analytics</span> <!-- Text for Analytics -->
+                </a>
+            </li>
+
+            <!-- Comments Navigation Item -->
+            <li class="nav-list">
+                <a href="#" class="link-item">
+                    <i class='bx bxs-message-rounded link-icon'></i> <!-- Icon -->
+                    <span class="link-text">Comments</span> <!-- Text for Comments -->
+                </a>
+            </li>
+
+            <!-- Profile Navigation Item -->
+            <li class="nav-list">
+                <a href="#" class="link-item">
+                    <i class='bx bxs-user link-icon'></i> <!-- Icon -->
+                    <span class="link-text">Profile</span> <!-- Text for Profile -->
+                </a>
+            </li>
+
+            <!-- Indicator for Active Navigation Item -->
+            <span class="indicator"></span>
+        </ul>
+    </nav>
+    <!-- External JavaScript File (Handles Navigation Behavior) -->
+    <script src="script.js"></script>
+</body>
+</html>

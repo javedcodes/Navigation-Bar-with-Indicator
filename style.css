@@ -1,0 +1,121 @@
+/* Importing Google Font 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General Reset and Font Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Applying 'Poppins' font throughout the document */
+}
+
+/* Body Styling: Full height, centering content, and background color */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF7043; 
+}
+
+/* Navigation Styling */
+nav {
+    border-radius: 12px;
+    background: #FFF;
+    padding: 0 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Content: Flexbox layout for the list items */
+.nav-content {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+/* Link Item Styling: Flexbox layout for icons and text */
+.link-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack icon and text vertically */
+    height: 120px;
+    width: 95px;
+    text-decoration: none; /* Removing underline from links */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Smooth animation for hover effects */
+}
+
+/* Active Link Item: Slight upward shift on active item */
+.link-item.active {
+    transform: translateY(-10px); /* Moves the active item up */
+}
+
+/* Icon Styling for the Navigation Links */
+.link-icon {
+    font-size: 38px;
+    color: #999; /* Default grey color for icons */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Smooth animation for icon color */
+}
+
+/* Active Icon Color: Orange for active link icon */
+.link-item.active .link-icon {
+    color: #FF7043; /* Updated to orange */
+}
+
+/* Text Styling: Positioned under the icon, initially hidden */
+.link-text {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FF7043; /* Updated text color to orange */
+    opacity: 0; /* Hidden by default */
+    transform: translateY(32px); /* Moves the text below the icon */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Smooth animation for text appearance */
+}
+
+/* Active Text Visibility: Text becomes visible when the item is active */
+.link-item.active .link-text {
+    opacity: 1; /* Text becomes visible */
+}
+
+/* Indicator Styling: Circular indicator under active link */
+.indicator {
+    position: absolute;
+    top: -14px;
+    left: 48px;
+    height: 36px;
+    width: 36px;
+    background-color: #FFF;
+    border: 6px solid #FF7043;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Indicator Decorative Elements: Before and After pseudo-elements for design */
+.indicator::before,
+.indicator::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    height: 24px;
+    width: 19px;
+}
+
+/* Left side decoration for the indicator */
+.indicator::before {
+    left: -22px;
+    background-color: #FFF;
+    border-top-right-radius: 25px;
+    box-shadow: 1px -13px #FF7043;
+}
+
+/* Right side decoration for the indicator */
+.indicator::after {
+    right: -22px;
+    background-color: #FFF; 
+    border-top-left-radius: 25px;
+    box-shadow: -1px -13px #FF7043;
+}
